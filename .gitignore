@@ -1,0 +1,43 @@
+# 회사 고유 컨텍스트는 기본 전량 제외 (빈 템플릿만 허용)
+# 개별 파일을 공개하려면 `git add -f <path>` 로 강제 추가
+context/*
+!context/*.template.md
+!context/.gitkeep
+
+# 산출물은 기본적으로 민감 (개별 연봉/평가 포함 가능)
+outputs/
+
+# 시스템 / 에디터
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# 임시 / 캐시
+*.tmp
+*.bak
+.cache/
+
+# OMC 런타임 상태
+.omc/
+
+# 민감 파일 (표준 블록)
+.env
+.env.*
+*.key
+*.pem
+credentials/
+secrets/
+
+# 하네스 진단 리포트 (로컬 용도, git 추적 불필요)
+.harness/
+
+# 세션 상태 (핸드오프 파일)
+.claude-handoff.json
+
+# 내부 실험 로그 (세션 회차·Hold 기록·내부 맥락 포함)
+experiments/
+
+# 시나리오 실행 결과물 (verifier 출력·개별 runs 디렉토리)
+scenarios/*/runs/

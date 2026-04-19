@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(rm -rf /*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -fd*)"
+    ],
+    "ask": [
+      "Write(context/**)",
+      "Edit(context/**)",
+      "Write(knowledge/**)",
+      "Edit(knowledge/**)",
+      "Write(.claude/rules/**)",
+      "Edit(.claude/rules/**)",
+      "Write(scenarios/rubric.md)",
+      "Edit(scenarios/rubric.md)",
+      "Write(scenarios/verifier-prompt.md)",
+      "Edit(scenarios/verifier-prompt.md)"
+    ]
+  }
+}
