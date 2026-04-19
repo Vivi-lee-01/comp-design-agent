@@ -11,10 +11,12 @@ HR 실무에서 페이밴드/레벨링/평가사이클을 설계·진단·반복
 4. 산출물은 `templates/*` 형식을 따르고, 결과물은 `outputs/` 디렉토리에 날짜를 붙여 저장한다 (예: `outputs/2026-04-18_diagnosis.md`).
 5. `knowledge/`는 범용 자산이므로 회사 특수 정보를 섞지 않는다. 회사별 내용은 `context/` 에만 반영한다.
 6. `.claude/rules/*.md`는 **세션 운영 룰**(Claude가 지킬 가드). verifier 역류·compounding 판단 등 절차 규칙은 여기서 관리한다. 도메인 지식(`knowledge/`)과 책임 분리.
+7. 산출물 저장 후 대화 마감 전에 **후속 포맷 선호**(PPT / Notion / PDF / 슬랙 / 이메일 / 그대로)를 사용자에게 선제 질문한다. 상세 절차는 `.claude/rules/output-delivery.md`.
 
 @.claude/rules/compounding.md
 @.claude/rules/scope-discipline.md
 @.claude/rules/knowledge-sync.md
+@.claude/rules/output-delivery.md
 
 ## 민감 정보 주의
 
